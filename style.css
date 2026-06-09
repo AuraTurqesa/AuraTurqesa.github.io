@@ -1,0 +1,65 @@
+/* Configuración general y tipografía */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo inicial blanco y texto oscuro */
+    background-color: #ffffff;
+    color: #1a1a1a; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* Caja del apartado del portfolio */
+.portfolio-container {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    /* Un borde sutil con el azul turquesa */
+    border: 3px solid #00ced1; 
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título principal */
+h1 {
+    color: #008b8b; /* Un turquesa un poco más oscuro para que resalte y contraste bien */
+    margin-bottom: 10px;
+}
+
+/* Estilo para el párrafo */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #00ced1; /* Fondo Azul Turquesa claro */
+    color: #ffffff;            /* Texto Blanco para alto contraste */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Efecto al pasar el ratón por encima del botón */
+button:hover {
+    background-color: #00a8a8; /* Turquesa más oscuro al hacer hover */
+}
+
+/* --- CLASE PARA EL MODO OSCURO (Se activará con JS) --- */
+body.modo-oscuro {
+    background-color: #121212; /* Fondo Negro oscuro */
+    color: #ffffff;            /* Texto Blanco */
+}
+
+body.modo-oscuro h1 {
+    color: #00ced1; /* El turquesa brilla más sobre el fondo negro */
+}
