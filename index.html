@@ -3,16 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
+    <title>Mi Portfolio Profesional</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="portfolio-container">
-        <h1>Hola, soy [Tu Nombre]</h1>
-        <p>Bienvenido a mi portfolio. Soy desarrollador y este es un pequeño apartado de prueba.</p>
-        
-        <button id="boton-color">Cambiar modo de fondo</button>
+    <header class="main-header">
+        <div class="logo">MiPortfolio</div>
+        <nav class="nav-links">
+            <a href="#info">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#experiencia">Experiencia</a>
+        </nav>
+        <button id="boton-color">Modo</button>
+    </header>
+
+    <main class="main-content">
+
+        <section id="info" class="section-info">
+            <h2>Sobre mí</h2>
+            <p>Bienvenido a mi espacio profesional. Soy un desarrollador apasionado por crear soluciones web modernas, eficientes y totalmente adaptables.</p>
+        </section>
+
+        <section id="proyectos" class="section-proyectos">
+            <h2>Mis Proyectos</h2>
+            
+            <div class="proyectos-subseccion">
+                <h3>Front-end</h3>
+                
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">Todos</button>
+                    <button class="btn-filtro" data-tech="html">HTML</button>
+                    <button class="btn-filtro" data-tech="css">CSS</button>
+                    <button class="btn-filtro" data-tech="js">JavaScript</button>
+                </div>
+
+                <div class="proyectos-container">
+                    <div class="proyecto-row" data-tags="html css js">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 1" class="proyecto-img">
+                        <span class="proyecto-name">E-commerce App</span>
+                        <span class="proyecto-ambito">Web / Frontend — 2026</span>
+                        <p class="proyecto-desc">Tienda en línea con interfaz intuitiva, catálogo dinámico y diseño totalmente adaptativo.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">HTML</span>, 
+                            <span class="lang">CSS</span>, 
+                            <span class="lang">JS</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyectos-subseccion">
+                <h3>Back-end</h3>
+                
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">Todos</button>
+                    <button class="btn-filtro" data-tech="python">Python</button>
+                    <button class="btn-filtro" data-tech="node.js">Node.js</button>
+                    <button class="btn-filtro" data-tech="go">Go</button>
+                    <button class="btn-filtro" data-tech="ruby">Ruby</button>
+                </div>
+
+                <div class="proyectos-container">
+                    
+                    <div class="proyecto-row" data-tags="node.js">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 2" class="proyecto-img">
+                        <span class="proyecto-name">Gestor de Tareas API</span>
+                        <span class="proyecto-ambito">Productividad / API — 2026</span>
+                        <p class="proyecto-desc">API REST para organizar el flujo de trabajo diario de equipos con autenticación JWT.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Node.js</span>, 
+                            <span class="lang">Express</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="python">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 3" class="proyecto-img">
+                        <span class="proyecto-name">Red Social Servidor</span>
+                        <span class="proyecto-ambito">Fullstack / BD — 2026</span>
+                        <p class="proyecto-desc">Arquitectura de base de datos y lógica de negocio para conectar usuarios globalmente.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Python</span>, 
+                            <span class="lang">PostgreSQL</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="go">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 4" class="proyecto-img">
+                        <span class="proyecto-name">Weather Service</span>
+                        <span class="proyecto-ambito">Microservicios — 2025</span>
+                        <p class="proyecto-desc">Servicio centralizado de consumo y caché de datos climatológicos mundiales.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Go</span>, 
+                            <span class="lang">Redis</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="node.js">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 5" class="proyecto-img">
+                        <span class="proyecto-name">Crypto Wallet Auth</span>
+                        <span class="proyecto-ambito">Blockchain — 2025</span>
+                        <p class="proyecto-desc">Módulo backend seguro para la verificación de firmas digitales y transacciones simuladas.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Node.js</span>, 
+                            <span class="lang">Web3.js</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="python">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 6" class="proyecto-img">
+                        <span class="proyecto-name">Email Marketing Engine</span>
+                        <span class="proyecto-ambito">Automatización — 2025</span>
+                        <p class="proyecto-desc">Motor en segundo plano encargado del envío masivo y programado de correos corporativos.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Python</span>, 
+                            <span class="lang">Celery</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="ruby">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 7" class="proyecto-img">
+                        <span class="proyecto-name">CMS Core API</span>
+                        <span class="proyecto-ambito">Headless CMS — 2024</span>
+                        <p class="proyecto-desc">Sistema de gestión de contenidos headless para publicación automatizada mediante Markdown.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Ruby</span>, 
+                            <span class="lang">Rails</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="python">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 8" class="proyecto-img">
+                        <span class="proyecto-name">Cyber Security Monitor</span>
+                        <span class="proyecto-ambito">Seguridad / Redes — 2024</span>
+                        <p class="proyecto-desc">Script de monitorización que analiza vulnerabilidades y registros de actividad en servidores.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Python</span>, 
+                            <span class="lang">Linux Shell</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="node.js">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 9" class="proyecto-img">
+                        <span class="proyecto-name">Fit Tracker Database</span>
+                        <span class="proyecto-ambito">Salud / NoSQL — 2023</span>
+                        <p class="proyecto-desc">Diseño de base de datos no relacional optimizada para el registro masivo de métricas físicas.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Node.js</span>, 
+                            <span class="lang">MongoDB</span>
+                        </span>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="node.js">
+                        <img src="https://via.placeholder.com/60" alt="Proyecto 10" class="proyecto-img">
+                        <span class="proyecto-name">Chat Server Realtime</span>
+                        <span class="proyecto-ambito">Communication — 2023</span>
+                        <p class="proyecto-desc">Servidor de mensajería instantánea bidireccional de baja latencia con soporte para salas.</p>
+                        <span class="proyecto-tech">
+                            <span class="lang">Node.js</span>, 
+                            <span class="lang">WebSockets</span>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="experiencia" class="section-experiencia">
+            <h2>Experiencia</h2>
+            <p><strong>Desarrollador Backend Junior</strong> | Empresa Tech (2025 - Presente)</p>
+            <p>Diseño de arquitecturas de bases de datos, optimización de consultas y creación de APIs robustas bajo estándares REST.</p>
+        </section>
+
     </main>
 
     <script src="script.js"></script>

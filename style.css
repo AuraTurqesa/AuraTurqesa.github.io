@@ -1,65 +1,73 @@
-/* Configuración general y tipografía */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Fondo inicial blanco y texto oscuro */
-    background-color: #ffffff;
-    color: #1a1a1a; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza el cambio de color */
+/* (Conserva los estilos generales de tu portfolio del paso anterior y ajusta/añade esto) */
+
+.proyectos-subseccion {
+    margin-top: 25px;
 }
 
-/* Caja del apartado del portfolio */
-.portfolio-container {
-    text-align: center;
-    padding: 30px;
-    border-radius: 12px;
-    /* Un borde sutil con el azul turquesa */
-    border: 3px solid #00ced1; 
-    max-width: 400px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para el título principal */
-h1 {
-    color: #008b8b; /* Un turquesa un poco más oscuro para que resalte y contraste bien */
+.proyectos-subseccion h3 {
+    color: #00ced1;
+    font-size: 1.3rem;
     margin-bottom: 10px;
+    padding-left: 5px;
+    border-left: 4px solid #008b8b;
 }
 
-/* Estilo para el párrafo */
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* MENÚ DE LENGUAJES (FLEXBOX SUPERIOR) */
+.menu-lenguajes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-/* Estilo del botón */
-button {
-    background-color: #00ced1; /* Fondo Azul Turquesa claro */
-    color: #ffffff;            /* Texto Blanco para alto contraste */
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 6px;
+.btn-filtro {
+    background-color: transparent;
+    color: #008b8b;
+    border: 1px solid #008b8b;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
 }
 
-/* Efecto al pasar el ratón por encima del botón */
-button:hover {
-    background-color: #00a8a8; /* Turquesa más oscuro al hacer hover */
+.btn-filtro:hover, .btn-filtro.active {
+    background-color: #00ced1;
+    color: #ffffff;
+    border-color: #00ced1;
 }
 
-/* --- CLASE PARA EL MODO OSCURO (Se activará con JS) --- */
-body.modo-oscuro {
-    background-color: #121212; /* Fondo Negro oscuro */
-    color: #ffffff;            /* Texto Blanco */
+/* RETORNO A LA ESTRUCTURA ORIGINAL DE LA ETIQUETA DE TECNOLOGÍAS */
+.proyecto-tech {
+    background-color: #00ced1;
+    color: #ffffff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap; /* Mantiene todo el texto unido */
+    min-width: 130px;
+    text-align: center;
 }
 
-body.modo-oscuro h1 {
-    color: #00ced1; /* El turquesa brilla más sobre el fondo negro */
+.proyecto-ambito {
+    color: #008b8b;
+    font-style: italic;
+    font-size: 0.9rem;
+    min-width: 210px;
+}
+
+/* Ocultar filas mediante JS */
+.proyecto-row.oculto {
+    display: none !important;
+}
+
+/* Estilos Modo Oscuro para los nuevos botones */
+body.modo-oscuro .btn-filtro {
+    color: #00ced1;
+    border-color: #00ced1;
+}
+body.modo-oscuro .btn-filtro:hover, body.modo-oscuro .btn-filtro.active {
+    background-color: #00ced1;
+    color: #121212;
 }
