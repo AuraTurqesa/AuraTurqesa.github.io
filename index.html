@@ -22,7 +22,7 @@
 
         <section id="info" class="section-info">
             <h2>Sobre mí</h2>
-            <p>Soy informático orientado a la programación multiplataforma. Este 2026 he terminado el CFGS en Desarrollo de Aplicaciones Multiplataforma en la Salle Gràcia. Me estoy especializando en IA y Big Data, en Jesuïtes Clot Mis puntos fuertes son la resolución de problemas y el trabajo en equipo. Los lenguajes que más domino son PHP (Laravel), SQL, Kotlin y Java. He experimentado con Python, Flutter, Swift y JavaScript.</p>
+            <p>Soy informático orientado a la programación multiplataforma. Este 2026 he terminado el CFGS en Desarrollo de Aplicaciones Multiplataforma en la Salle Gràcia. Me estoy especializando en IA y Big Data, en Jesuïtes Clot. Mis puntos fuertes son la resolución de problemas y el trabajo en equipo. Los lenguajes que más domino son PHP (Laravel), SQL, Kotlin y Java. He experimentado con Python, Flutter, Swift y JavaScript.</p>
         </section>
 
         <section id="proyectos" class="section-proyectos">
@@ -30,17 +30,28 @@
             
             <div class="proyectos-subseccion">
                 <h3>Front-end</h3>
-                <div class="proyectos-container">
-                    
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">Todos</button>
+                    <button class="btn-filtro" data-tech="html">HTML</button>
+                    <button class="btn-filtro" data-tech="css">CSS</button>
+                    <button class="btn-filtro" data-tech="javascript">JavaScript</button>
                 </div>
+                <div class="proyectos-container">
+                    </div>
             </div>
 
             <div class="proyectos-subseccion">
                 <h3>Back-end</h3>
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">Todos</button>
+                    <button class="btn-filtro" data-tech="php">PHP</button>
+                    <button class="btn-filtro" data-tech="kotlin">Kotlin</button>
+                    <button class="btn-filtro" data-tech="python">Python</button>
+                </div>
                 <div class="proyectos-container">
     
-                    <div class="proyecto-row">
-                        <img src="https://via.placeholder.com/60" alt="Proyecto 2" class="proyecto-img">
+                    <div class="proyecto-row" data-tags="php javascript">
+                        <img src="logo_j.png" alt="JanusView" class="proyecto-img">
                         <span class="proyecto-name">JanusView</span>
                         <span class="proyecto-ambito">Proyecto de fin de ciclo — 2025-26</span>
                         <p class="proyecto-desc">Aplicación web para la visualización de datos según los parámetros establecidos y visualización de predicciones. Aplicación en desarrollo.</p>
@@ -51,8 +62,8 @@
                         </div>
                     </div>
 
-                    <div class="proyecto-row">
-                        <img src="https://via.placeholder.com/60" alt="Proyecto 2" class="proyecto-img">
+                    <div class="proyecto-row" data-tags="kotlin">
+                        <img src="logo_k.png" alt="Login Responsive" class="proyecto-img">
                         <span class="proyecto-name">Login Responsive - Adaptative</span>
                         <span class="proyecto-ambito">Práctica de clase — 2025</span>
                         <p class="proyecto-desc">Aplicación móvil responsive con diseño adaptativo para diferentes tamaños de pantalla. Muestra cómo pasar de pantalla y cómo hacer un login. Es un template de login para aplicaciones móviles.</p>
@@ -62,8 +73,8 @@
                         </div>
                     </div>
 
-                    <div class="proyecto-row">
-                        <img src="https://via.placeholder.com/60" alt="Proyecto 2" class="proyecto-img">
+                    <div class="proyecto-row" data-tags="php">
+                        <img src="logo_r.png" alt="Gestion RPG" class="proyecto-img">
                         <span class="proyecto-name">Gestion RPG</span>
                         <span class="proyecto-ambito">Práctica de clase — 2026</span>
                         <p class="proyecto-desc">Aplicación web y API para la gestión de datos de un juego de rol. Muestra cómo gestionar los personajes, los ítems, tanto en API como en vista. También incluye funcionalidades de autenticación y gestión de usuarios, soft delete y subir imágenes. como fotos.</p>
@@ -73,8 +84,8 @@
                         </div>
                     </div>
 
-                    <div class="proyecto-row">
-                        <img src="https://via.placeholder.com/60" alt="Proyecto 2" class="proyecto-img">
+                    <div class="proyecto-row" data-tags="python">
+                        <img src="logo_c.png" alt="Mitjana Estudiants" class="proyecto-img">
                         <span class="proyecto-name">Mitjana Estudiants</span>
                         <span class="proyecto-ambito">Proyecto libre — 2026</span>
                         <p class="proyecto-desc">Aplicación móvil para analizar las notas de los estudiantes y las encuestas de satisfacción para demostrar una correlación entre ambos.</p>
@@ -97,7 +108,7 @@
 
         <section id="experiencia" class="section-experiencia">
             <h2>Formación</h2>
-            <p><strong>Estudiante de Desarrollo de Aplicaciones Multiplataforma</strong> | La Salle Gràcia (2023 - 2026)</p>
+            <p><strong>Título CFGS en Desarrollo de Aplicaciones Multiplataforma</strong> | La Salle Gràcia (2023 - 2026)</p>
             <p><strong>Curso de Frontend para principiantes: maquetación y creación de páginas web con HTML, CSS y Bootstrap</strong> | Barcelona Activa (07/2024)</p>
             <p><strong>Curso de Flutter para personas programadoras: creación de aplicaciones móviles con Dart</strong> | Barcelona Activa (07/2024)</p>
             <p><strong>Curso de Construcción de APIs en PHP y MySQL para personas programadoras</strong> | Barcelona Activa (07/2024)</p>
