@@ -1,23 +1,118 @@
-/* (Conserva los estilos generales de tu portfolio del paso anterior y ajusta/añade esto) */
+/* ==========================================
+   1. RESET GENERAL Y CONFIGURACIÓN BASE
+   ========================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================
+   2. HEADER (NAV BAR FLEXBOX)
+   ========================================== */
+.main-header {
+    background-color: #008b8b;
+    color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #00ced1;
+}
+
+#boton-color {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ==========================================
+   3. CONTENEDOR PRINCIPAL Y SECCIONES
+   ========================================== */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section {
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+h2 {
+    color: #008b8b;
+    border-bottom: 2px solid #00ced1;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   4. BLOQUE DE PROYECTOS Y SUBSECCIONES
+   ========================================== */
 .proyectos-subseccion {
     margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .proyectos-subseccion h3 {
     color: #00ced1;
     font-size: 1.3rem;
-    margin-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 8px;
     border-left: 4px solid #008b8b;
 }
 
-/* MENÚ DE LENGUAJES (FLEXBOX SUPERIOR) */
+/* MENÚ DE LENGUAJES (FILTROS SUPERIORES) */
 .menu-lenguajes {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
     flex-wrap: wrap;
+    margin-bottom: 5px;
 }
 
 .btn-filtro {
@@ -28,6 +123,7 @@
     font-size: 0.85rem;
     border-radius: 20px;
     cursor: pointer;
+    font-weight: 600;
     transition: all 0.2s ease;
 }
 
@@ -37,36 +133,125 @@
     border-color: #00ced1;
 }
 
-/* RETORNO A LA ESTRUCTURA ORIGINAL DE LA ETIQUETA DE TECNOLOGÍAS */
-.proyecto-tech {
-    background-color: #00ced1;
-    color: #ffffff;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.85rem;
+.proyectos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* ==========================================
+   5. FILA DE PROYECTO (COMPACTA HACIA LA IZQUIERDA)
+   ========================================== */
+.proyecto-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Todo alineado de seguido al inicio */
+    gap: 20px;                   /* Distancia fija y controlada entre elementos */
+    padding: 12px 20px;
+    border: 2px solid #00ced1;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.proyecto-row:hover {
+    transform: scale(1.005);
+    background-color: #f0fdfd;
+}
+
+/* ELEMENTOS INTERNOS DE LA FILA */
+.proyecto-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+    background-color: #e0e0e0; 
+    flex-shrink: 0;
+}
+
+.proyecto-name {
     font-weight: bold;
-    white-space: nowrap; /* Mantiene todo el texto unido */
-    min-width: 130px;
-    text-align: center;
+    font-size: 1.05rem;
+    min-width: 140px; /* Estrechado para pegarse más al borde */
+    flex-shrink: 0;
 }
 
 .proyecto-ambito {
     color: #008b8b;
     font-style: italic;
     font-size: 0.9rem;
-    min-width: 210px;
+    min-width: 190px; /* Ceñido al ancho real del texto cronológico */
+    flex-shrink: 0;
 }
 
-/* Ocultar filas mediante JS */
+.proyecto-desc {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1; /* Absorbe el espacio libre para empujar las tecnologías */
+    margin: 0;
+}
+
+/* GRUPO DE TECNOLOGÍAS ALINEADO A LA DERECHA */
+.proyecto-tech-group {
+    display: flex;
+    gap: 8px;
+    margin-left: auto; /* Empuja magnéticamente el grupo hacia el extremo derecho */
+    flex-shrink: 0;
+}
+
+.proyecto-tech {
+    background-color: #00ced1;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* CLASE DE JAVASCRIPT PARA OCULTAR FILAS */
 .proyecto-row.oculto {
     display: none !important;
 }
 
-/* Estilos Modo Oscuro para los nuevos botones */
+/* ==========================================
+   6. CONFIGURACIÓN DEL MODO OSCURO
+   ========================================== */
+body.modo-oscuro {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.modo-oscuro section {
+    background-color: #1e1e1e;
+    border-color: #333333;
+}
+
+body.modo-oscuro .proyecto-row {
+    background-color: #252525;
+    border-color: #00ced1;
+}
+
+body.modo-oscuro .proyecto-row:hover {
+    background-color: #2d2d2d;
+}
+
+body.modo-oscuro .proyecto-ambito {
+    color: #00ced1;
+}
+
+body.modo-oscuro #boton-color {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
 body.modo-oscuro .btn-filtro {
     color: #00ced1;
     border-color: #00ced1;
 }
+
 body.modo-oscuro .btn-filtro:hover, body.modo-oscuro .btn-filtro.active {
     background-color: #00ced1;
     color: #121212;

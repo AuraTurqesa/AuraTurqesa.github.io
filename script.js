@@ -1,38 +1,57 @@
-// 1. MODO CLARO / OSCURO
-const botonModo = document.getElementById('boton-color');
-const cuerpoPagina = document.body;
+// Esperamos a que el HTML esté completamente cargado en el navegador
+document.addEventListener('DOMContentLoaded', () => {
 
-botonModo.addEventListener('click', () => {
-    cuerpoPagina.classList.toggle('modo-oscuro');
-    if (cuerpoPagina.classList.contains('modo-oscuro')) {
-        botonModo.textContent = "Claro";
-    } else {
-        botonModo.textContent = "Modo";
-    }
-});
+    // ==========================================
+    // 1. ALTERNACIÓN DE MODO CLARO / OSCURO
+    // ==========================================
+    const botonModo = document.getElementById('boton-color');
+    const cuerpoPagina = document.body;
 
-// 2. FILTRADO FILAS DE PROYECTOS
-const botonesFiltro = document.querySelectorAll('.btn-filtro');
-
-botonesFiltro.forEach(boton => {
-    boton.addEventListener('click', (e) => {
-        const lenguajeSeleccionado = e.target.getAttribute('data-tech');
-        const subseccion = e.target.closest('.proyectos-subseccion');
-        
-        // Activar estado visual en el botón correspondiente
-        subseccion.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('active'));
-        e.target.classList.add('active');
-
-        // Filtrar filas
-        const filasProyectos = subseccion.querySelectorAll('.proyecto-row');
-        filasProyectos.forEach(fila => {
-            const tagsFila = fila.getAttribute('data-tags').toLowerCase();
-
-            if (lenguajeSeleccionado === 'todos' || tagsFila.includes(lenguajeSeleccionado)) {
-                fila.classList.remove('oculto');
+    if (botonModo) {
+        botonModo.addEventListener('click', () => {
+            cuerpoPagina.classList.toggle('modo-oscuro');
+            
+            // Cambia el texto del botón según el modo activo
+            if (cuerpoPagina.classList.contains('modo-oscuro')) {
+                botonModo.textContent = "Claro";
             } else {
-                fila.classList.add('oculto');
+                botonModo.textContent = "Modo";
             }
         });
+    }
+
+    // ==========================================
+    // 2. FILTRADO INTERACTIVO DE PROYECTOS
+    // ==========================================
+    const botonesFiltro = document.querySelectorAll('.btn-filtro');
+
+    botonesFiltro.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            // Conseguimos la tecnología del botón pulsado (ej: 'python')
+            const lenguajeSeleccionado = e.target.getAttribute('data-tech');
+            
+            // Buscamos la subsección contenedora (Front-end o Back-end) para aislar el filtro
+            const subseccion = e.target.closest('.proyectos-subseccion');
+            
+            // Quitamos la clase 'active' de los otros botones del mismo menú y se la damos al pulsado
+            subseccion.querySelectorAll('.btn-filtro').forEach(btn => btn.classList.remove('active'));
+            e.target.classList.add('active');
+
+            // Filtramos las filas de esa subsección en específico
+            const filasProyectos = subseccion.querySelectorAll('.proyecto-row');
+            
+            filasProyectos.forEach(fila => {
+                // Leemos los tags definidos en el atributo 'data-tags' de la fila
+                const tagsFila = fila.getAttribute('data-tags').toLowerCase();
+
+                // Si se pulsa "Todos" o el tag está incluido en la fila, la mostramos; si no, se oculta
+                if (lenguajeSeleccionado === 'todos' || tagsFila.includes(lenguajeSeleccionado)) {
+                    fila.classList.remove('oculto');
+                } else {
+                    fila.classList.add('oculto');
+                }
+            });
+        });
     });
+
 });
