@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Professional Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">MyPortfolio</div>
+        <nav class="nav-links">
+            <a href="#info">About me</a>
+            <a href="#proyectos">Projects</a>
+            <a href="#experiencia">Experience</a>
+            <a href="#formacion">Education</a>
+        </nav>
+        <div class="idioma-selector">
+            <select id="select-idioma" onchange="cambiarIdioma(this.value)">
+                <option value="index-es.html">Español</option>
+                <option value="index-en.html">English</option>
+                <option value="index-ca.html">Català</option>
+            </select>
+        </div>
+        <button id="boton-color">Mode</button>
+    </header>
+
+    <main class="main-content">
+
+        <section id="info" class="section-info">
+            <h2>About me</h2>
+            <p>I am a computer technician focused on multiplatform programming. This 2026 I finished my Higher Training Cycle (CFGS) in Multiplatform Applications Development at La Salle Gràcia. I am currently specializing in AI and Big Data at Jesuïtes Clot. My strengths include problem-solving and teamwork. My most mastered languages are PHP (Laravel), SQL, Kotlin, and Java. I have also experimented with Python, Flutter, Swift, and JavaScript.</p>
+            <p>Visit my LinkedIn! <a href="https://www.linkedin.com/in/sergi-saravia-2807a3295/" target="_blank">LinkedIn</a></p>
+            
+            <div class="documentos-links" style="margin-top: 15px;">
+                <a href="cv-developer-ingles.pdf" target="_blank" class="btn-doc" style="margin-right: 10px; padding: 8px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; display: inline-block;">CV</a>
+                <a href="Carta de Presentación Inglés.pdf" target="_blank" class="btn-doc" style="padding: 8px 15px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; display: inline-block;">Cover Letter</a>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section-proyectos">
+            <h2>My Projects</h2>
+            
+            <div class="proyectos-subseccion">
+                <h3>Front-end</h3>
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">All</button>
+                </div>
+                <div class="proyectos-container">
+                    </div>
+            </div>
+
+            <div class="proyectos-subseccion">
+                <h3>Back-end</h3>
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">All</button>
+                    <button class="btn-filtro" data-tech="laravel">Laravel</button>
+                    <button class="btn-filtro" data-tech="kotlin">Kotlin</button>
+                    <button class="btn-filtro" data-tech="python">Python</button>
+                    <button class="btn-filtro" data-tech="javascript">JavaScript</button>
+                </div>
+                <div class="proyectos-container">
+    
+                    <div class="proyecto-row" data-tags="laravel javascript">
+                        <img src="logo_j.png" alt="JanusView" class="proyecto-img">
+                        <span class="proyecto-name">JanusView</span>
+                        <span class="proyecto-ambito">Capston Project — 2025-26</span>
+                        <p class="proyecto-desc">Web application for data visualization based on set parameters and predictive forecasting. Application currently under development.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">PHP</span>
+                            <span class="proyecto-tech">Laravel</span>
+                            <span class="proyecto-tech">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="kotlin">
+                        <img src="logo_k.png" alt="Responsive Login" class="proyecto-img">
+                        <span class="proyecto-name">Responsive Login - Adaptive</span>
+                        <span class="proyecto-ambito">Class Assignment — 2025</span>
+                        <p class="proyecto-desc">Responsive mobile application with an adaptive design for different screen sizes. Demonstrates screen navigation and login workflows. It serves as a login template for mobile applications.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">Kotlin</span>
+                            <span class="proyecto-tech">Android</span>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="laravel">
+                        <img src="logo_r.png" alt="RPG Management" class="proyecto-img">
+                        <span class="proyecto-name">RPG Management</span>
+                        <span class="proyecto-ambito">Class Assignment — 2026</span>
+                        <p class="proyecto-desc">Web application and API for managing role-playing game data. Demonstrates how to manage characters and items both via API and frontend views. It also includes authentication features, user management, soft deletes, and image uploads.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">PHP</span>
+                            <span class="proyecto-tech">Laravel</span>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="python">
+                        <img src="logo_c.png" alt="Student Average" class="proyecto-img">
+                        <span class="proyecto-name">Student Average</span>
+                        <span class="proyecto-ambito">Personal Project — 2026</span>
+                        <p class="proyecto-desc">Mobile application to analyze student grades and satisfaction surveys to demonstrate a correlation between both factors.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">Python</span>
+                            <span class="proyecto-tech">Django</span>
+                        </div>
+                    </div>
+
+                    <p>To see more projects, check out my GitHub: <a href="https://github.com/AuraTurqesa" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="experiencia" class="section-experiencia">
+            <h2>Experience</h2>
+            <p><strong>Marketing Intern</strong> | Acció Preventiva (02/2026 - 05/2026)</p>
+            <p>Data management for teamwork optimization.</p>
+        </section>
+
+        <section id="formacion" class="section-formacion">
+            <h2>Education</h2>
+            <p><strong>Higher Training Cycle (CFGS) in Multiplatform Applications Development</strong> | La Salle Gràcia (2023 - 2026)</p>
+            
+            <br>
+            
+            <p><strong>Frontend Course for Beginners: Layout and Web Page Creation with HTML, CSS, and Bootstrap</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Practical introduction to responsive web design and static layout using structural tools of HTML5, advanced styling with CSS3, and the Bootstrap framework to streamline adaptable interface development.</em></p>
+            
+            <br>
+            
+            <p><strong>Flutter Course for Programmers: Mobile Application Development with Dart</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Focused on native multiplatform development for iOS and Android using a single codebase, deeply exploring state management, custom widget design, and system component integration.</em></p>
+            
+            <br>
+            
+            <p><strong>API Building in PHP and MySQL for Programmers Course</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Design and implementation of structured web services under REST architecture, covering HTTP request handling, secure CRUD operations, relational database modeling, and authentication.</em></p>
+            
+            <br>
+            
+            <p><strong>TypeScript Course - Data Types, Promises, and Object-Oriented Programming</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Specialization in the JavaScript superset to add robust static typing to code, advanced asynchrony using promises/async-await, and structured design patterns under the OOP paradigm.</em></p>
+            
+            <br>
+            
+            <p><strong>Kotlin for Programmers Course: Creating Android Apps</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Modern native development in Android using core features of Kotlin, including concise syntax, null-safety, and dynamic view integration.</em></p>
+            
+            <br>
+            
+            <p><strong>Unity and C# Course for Game Development</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Practical fundamentals of game logic within the Unity 2D/3D engine, controlling physics, collision events, structured C# scripting, and scene lifecycle management.</em></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

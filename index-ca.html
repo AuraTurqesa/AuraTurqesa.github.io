@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El meu Portfoli Professional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">ElMeuPortfoli</div>
+        <nav class="nav-links">
+            <a href="#info">Sobre mi</a>
+            <a href="#proyectos">Projectes</a>
+            <a href="#experiencia">Experiència</a>
+            <a href="#formacion">Formació</a>
+        </nav>
+        <div class="idioma-selector">
+            <select id="select-idioma" onchange="cambiarIdioma(this.value)">
+                <option value="index-es.html">Español</option>
+                <option value="index-en.html">English</option>
+                <option value="index-ca.html">Català</option>
+            </select>
+        </div>
+        <button id="boton-color">Mode</button>
+    </header>
+
+    <main class="main-content">
+
+        <section id="info" class="section-info">
+            <h2>Sobre mi</h2>
+            <p>Sóc informàtic orientat a la programació multiplataforma. Aquest 2026 he acabat el CFGS en Desenvolupament d'Aplicacions Multiplataforma a la Salle Gràcia. M'estic especialitzant en IA i Big Data, a Jesuïtes Clot. Els meus punts forts són la resolució de problemes i el treball en equip. Els llenguatges que més domino són PHP (Laravel), SQL, Kotlin i Java. He experimentat amb Python, Flutter, Swift i JavaScript.</p>
+            <p>Visita el meu LinkedIn! <a href="https://www.linkedin.com/in/sergi-saravia-2807a3295/" target="_blank">LinkedIn</a></p>
+            
+            <div class="documentos-links" style="margin-top: 15px;">
+                <a href="cv-developer-catalan.pdf" target="_blank" class="btn-doc" style="margin-right: 10px; padding: 8px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; display: inline-block;">CV</a>
+                <a href="Carta de presentació Catalán.pdf" target="_blank" class="btn-doc" style="padding: 8px 15px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 4px; display: inline-block;">Carta de Presentació</a>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section-proyectos">
+            <h2>Els meus Projectes</h2>
+            
+            <div class="proyectos-subseccion">
+                <h3>Front-end</h3>
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">Tots</button>
+                </div>
+                <div class="proyectos-container">
+                    </div>
+            </div>
+
+            <div class="proyectos-subseccion">
+                <h3>Back-end</h3>
+                <div class="menu-lenguajes">
+                    <button class="btn-filtro active" data-tech="todos">Tots</button>
+                    <button class="btn-filtro" data-tech="laravel">Laravel</button>
+                    <button class="btn-filtro" data-tech="kotlin">Kotlin</button>
+                    <button class="btn-filtro" data-tech="python">Python</button>
+                    <button class="btn-filtro" data-tech="javascript">JavaScript</button>
+                </div>
+                <div class="proyectos-container">
+    
+                    <div class="proyecto-row" data-tags="laravel javascript">
+                        <img src="logo_j.png" alt="JanusView" class="proyecto-img">
+                        <span class="proyecto-name">JanusView</span>
+                        <span class="proyecto-ambito">Projecte de final de cicle — 2025-26</span>
+                        <p class="proyecto-desc">Aplicació web per a la visualització de dades segons els paràmetres establerts i visualització de prediccions. Aplicació en desenvolupament.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">PHP</span>
+                            <span class="proyecto-tech">Laravel</span>
+                            <span class="proyecto-tech">JavaScript</span>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="kotlin">
+                        <img src="logo_k.png" alt="Login Responsive" class="proyecto-img">
+                        <span class="proyecto-name">Login Responsive - Adaptatiu</span>
+                        <span class="proyecto-ambito">Pràctica de classe — 2025</span>
+                        <p class="proyecto-desc">Aplicació mòbil responsive amb disseny adaptatiu per a diferents mides de pantalla. Mostra com passar de pantalla i com fer un login. És un template de login per a aplicacions mòbils.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">Kotlin</span>
+                            <span class="proyecto-tech">Android</span>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="laravel">
+                        <img src="logo_r.png" alt="Gestion RPG" class="proyecto-img">
+                        <span class="proyecto-name">Gestió RPG</span>
+                        <span class="proyecto-ambito">Pràctica de classe — 2026</span>
+                        <p class="proyecto-desc">Aplicació web i API per a la gestió de dades d'un joc de rol. Mostra com gestionar els personatges, els ítems, tant en API com en vista. També inclou funcionalitats d'autenticació i gestió d'usuaris, soft delete i pujar imatges.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">PHP</span>
+                            <span class="proyecto-tech">Laravel</span>
+                        </div>
+                    </div>
+
+                    <div class="proyecto-row" data-tags="python">
+                        <img src="logo_c.png" alt="Mitjana Estudiants" class="proyecto-img">
+                        <span class="proyecto-name">Mitjana Estudiants</span>
+                        <span class="proyecto-ambito">Projecte lliure — 2026</span>
+                        <p class="proyecto-desc">Aplicació mòbil per analitzar les notes dels estudiants i les enquestes de satisfacció per demostrar una correlació entre tots dos.</p>
+                        <div class="proyecto-tech-group">
+                            <span class="proyecto-tech">Python</span>
+                            <span class="proyecto-tech">Django</span>
+                        </div>
+                    </div>
+
+                    <p>Per veure més projectes, entra al meu GitHub: <a href="https://github.com/AuraTurqesa" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="experiencia" class="section-experiencia">
+            <h2>Experiència</h2>
+            <p><strong>Becari en Màrqueting</strong> | Acció Preventiva (02/2026 - 05/2026)</p>
+            <p>Gestió de dades per a l'optimització del treball en equip.</p>
+        </section>
+
+        <section id="formacion" class="section-formacion">
+            <h2>Formació</h2>
+            <p><strong>Títol CFGS en Desenvolupament d'Aplicacions Multiplataforma</strong> | La Salle Gràcia (2023 - 2026)</p>
+            
+            <br>
+            
+            <p><strong>Curs de Frontend per a principiants: maquetació i creació de pàgines web amb HTML, CSS i Bootstrap</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Introducció pràctica al disseny web responsive i maquetació estàtica utilitzant les eines estructurals d'HTML5, estils avançats amb CSS3 i el framework Bootstrap per agilitzar el desenvolupament d'interfícies adaptables.</em></p>
+            
+            <br>
+            
+            <p><strong>Curs de Flutter per a persones programadores: creació d'aplicacions mòbils amb Dart</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Enfocament en el desenvolupament multiplataforma natiu per a iOS i Android mitjançant un únic codi base, aprofundint en la gestió d'estats, disseny de widgets personalitzats i integració de components del sistema.</em></p>
+            
+            <br>
+            
+            <p><strong>Curs de Construcció d'APIs en PHP i MySQL per a persones programadores</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Disseny i implementació de serveis web estructurats sota arquitectura REST, cobrint el maneig de peticions HTTP, operacions CRUD segures, modelatge de bases de dades relacionals i autenticació.</em></p>
+            
+            <br>
+            
+            <p><strong>Curs de TypeScript - tipus de dades, promeses i programació orientada a objectes</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Especialització en el superset de JavaScript per afegir tipatge estàtic robust al codi, asincronia avançada mitjançant promeses/async-await i patrons de disseny estructurats sota el paradigma de POO.</em></p>
+            
+            <br>
+            
+            <p><strong>Curs de Kotlin per a persones programadores: creació d'apps d'Android</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Desenvolupament natiu modern en Android utilitzant les característiques clau de Kotlin, incloent la sintaxi concisa, la seguretat davant de nuls (null-safety) i la integració de vistes dinàmiques.</em></p>
+            
+            <br>
+            
+            <p><strong>Curs d'Unity i C# per al desenvolupament de videojocs</strong> | Barcelona Activa (07/2024)</p>
+            <p><em>Fonaments pràctics de la lògica de videojocs en el motor Unity 2D/3D, controlant físiques, esdeveniments de col·lisió, scripts estructurats en C# i gestió del cicle de vida de les escenes.</em></p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

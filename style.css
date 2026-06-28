@@ -256,3 +256,21 @@ body.modo-oscuro .btn-filtro:hover, body.modo-oscuro .btn-filtro.active {
     background-color: #00ced1;
     color: #121212;
 }
+
+/* ==========================================
+   7. CONFIGURACIÓN DEL CAMBIO DE IDIOMA
+   ========================================== */
+.idioma-selector select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.idioma-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+}

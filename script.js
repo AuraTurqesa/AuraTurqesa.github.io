@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             filasProyectos.forEach(fila => {
                 // Leemos los tags definidos en el atributo 'data-tags' de la fila
-                const tagsFila = fila.getAttribute('data-tags').toLowerCase();
+                // Añadimos una validación por si alguna fila no tiene el atributo data-tags
+                const atributoTags = fila.getAttribute('data-tags');
+                const tagsFila = atributoTags ? atributoTags.toLowerCase() : '';
 
                 // Si se pulsa "Todos" o el tag está incluido en la fila, la mostramos; si no, se oculta
                 if (lenguajeSeleccionado === 'todos' || tagsFila.includes(lenguajeSeleccionado)) {
@@ -55,3 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+// ==========================================
+// 3. CONTROLADOR DE CAMBIO DE IDIOMA
+// ==========================================
+function cambiarIdioma(url) {
+    if (url) {
+        window.location.href = url;
+    }
+}
